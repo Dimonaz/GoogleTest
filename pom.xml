@@ -37,6 +37,9 @@
         </dependency>
     </dependencies>
     <build>
+        <testSourceDirectory>
+            src/test/java/com/company
+        </testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
