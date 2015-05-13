@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+
 import java.util.*;
 
 
@@ -29,10 +30,12 @@ public class GooglePage {
     public static void open() {
 
         System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "/home/GoogleTest/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--lang=en");
         driver = new ChromeDriver(options);
         driver.get("https://translate.google.com");
+
     }
 
     public static void clean(){
