@@ -37,7 +37,7 @@
     </dependencies>
 
     <build>
-        <outputDirectory>/home/build/</outputDirectory>
+        <outputDirectory>/vagrant/build/</outputDirectory>
         <plugins>
             <plugin>
                 <artifactId>maven-clean-plugin</artifactId>
@@ -45,7 +45,7 @@
                 <configuration>
                     <filesets>
                         <fileset>
-                            <directory>build</directory>
+                            <directory>/vagrant/build/</directory>
                             <includes>
                                 <include>**/*</include>
                             </includes>
