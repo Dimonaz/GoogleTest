@@ -69,7 +69,25 @@
                 <version>2.18.1</version>
             </plugin>
         </plugins>
+        <extensions>
+            <!-- start - for deploying using webdav -->
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-webdav</artifactId>
+                <version>1.0-beta-2</version>
+            </extension>
+            <!-- end - for deploying using webdav -->
+        </extensions>
     </build>
+    <distributionManagement>
+        <!-- start - location where site is deployed - username/password for site.deployments in server.xml -->
+        <site>
+            <id>site.deployments</id>
+            <name>Site deployments</name>
+            <url>dav:http://127.0.0.1/sites/${project.artifactId}/</url>
+        </site>
+        <!-- end - location where site is deployed - username/password for site.deployments in server.xml -->
+    </distributionManagement>
     <reporting>
         <plugins>
             <plugin>
