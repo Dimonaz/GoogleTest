@@ -30,7 +30,7 @@ public class UnitTest {
     }
 
     @Test
-    public void testTest1() throws Exception {
+    public void Test1() throws Exception {
 
         Assert.assertTrue(verifyIsEmpty(inputField));
 
