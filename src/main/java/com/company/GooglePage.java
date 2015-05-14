@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 
@@ -31,11 +32,12 @@ public class GooglePage {
     public static void open() {
 
         //System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", "/home/LocalTest/chromedriver.exe");
+        /*System.setProperty("webdriver.chrome.driver", "/home/LocalTest/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--lang=en");
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);*/
         //driver = new HtmlUnitDriver();
+        driver = new FirefoxDriver();
         driver.get("https://translate.google.com");
 
     }
