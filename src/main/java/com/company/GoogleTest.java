@@ -43,7 +43,7 @@ public class GoogleTest {
 
     }
 
-    @Test
+    /*@Test
 
     public void Test2(){
 
@@ -124,11 +124,6 @@ public class GoogleTest {
 
         Assert.assertEquals("Gloria a Ucrania! ¡Gloria a los héroes!", getTranslation("Ukrainian", "Spanish", "Слава Україні! Героям Слава!"));
 
-    }
-
-
-
-
-
+    }*/
 
 }
