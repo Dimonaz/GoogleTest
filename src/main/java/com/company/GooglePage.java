@@ -30,8 +30,8 @@ public class GooglePage {
 
     public static void open() {
 
-        System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
-        //System.setProperty("webdriver.chrome.driver", "/home/GoogleTest/chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/LocalTest/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--lang=en");
         driver = new ChromeDriver(options);
