@@ -36,7 +36,7 @@ public class UnitTest {
 
     }
 
-  /*  @Test
+    @Test
 
     public void Test2(){
 
@@ -105,5 +105,5 @@ public class UnitTest {
         clearInput();
         Assert.assertTrue(verifyIsEmpty(resultField));
 
-    }*/
+    }
 }
