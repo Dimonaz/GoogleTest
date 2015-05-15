@@ -29,7 +29,6 @@ public class GooglePage {
     public static String outputLanguageArrow = "//div[@id='gt-tl-gms']";
     public static String loudspeakerButton = "//div[@id = 'gt-res-listen']";
     public static String clearButton = "//div[@id = 'gt-clear']";
-    final static Logger logger = Logger.getLogger("myLogger");
 
     public static void open() {
 
