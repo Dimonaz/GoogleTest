@@ -36,8 +36,6 @@ public class GooglePage {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--lang=en");
         driver = new ChromeDriver(options);
-        //driver = new HtmlUnitDriver();
-        //driver = new FirefoxDriver();
         driver.get("https://translate.google.com");
 
     }
