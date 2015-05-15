@@ -11,6 +11,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 
 import java.util.*;
+import java.util.logging.Logger;
 
 
 /**
@@ -28,11 +29,12 @@ public class GooglePage {
     public static String outputLanguageArrow = "//div[@id='gt-tl-gms']";
     public static String loudspeakerButton = "//div[@id = 'gt-res-listen']";
     public static String clearButton = "//div[@id = 'gt-clear']";
+    final static Logger logger = Logger.getLogger("myLogger");
 
     public static void open() {
 
         //System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", "/home/vagrant/LocalTest/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/home/vagrant/GoogleTest/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--lang=en");
         driver = new ChromeDriver(options);

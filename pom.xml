@@ -8,10 +8,17 @@
     <artifactId>GoogleTest</artifactId>
     <version>1.0-SNAPSHOT</version>
     <distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>repo</id>
+            <name>MyRepository</name>
+            <url>/var/www/GoogleTest</url>
+            <layout>default</layout>
+        </repository>
         <site>
-            <id>site.deployments</id>
-            <name>Site deployments</name>
-            <url>dav:http://127.0.0.1/sites/${project.artifactId}/</url>
+            <id>GoogleTest</id>
+            <name>GoogleTest</name>
+            <url>dav:http://localhost:80/site/${project.artifactId}/</url>
         </site>
     </distributionManagement>
     <dependencies>
@@ -87,13 +94,11 @@
             </plugin>
         </plugins>
         <extensions>
-            <!-- start - for deploying using webdav -->
             <extension>
                 <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-webdav</artifactId>
-                <version>1.0-beta-2</version>
+                <artifactId>wagon-webdav-jackrabbit</artifactId>
+                <version>1.0-beta-7</version>
             </extension>
-            <!-- end - for deploying using webdav -->
         </extensions>
     </build>
     <reporting>
@@ -102,6 +107,24 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
                 <version>2.18.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.8</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <!--<report>dependencies</report>
+                            <report>project-team</report>
+                            <report>mailing-list</report>
+                            <report>cim</report>
+                            <report>issue-tracking</report>
+                            <report>license</report>-->
+                            <report>scm</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
             </plugin>
         </plugins>
     </reporting>
