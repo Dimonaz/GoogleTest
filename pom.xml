@@ -7,6 +7,13 @@
     <groupId>Dima</groupId>
     <artifactId>GoogleTest</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <distributionManagement>
+        <site>
+            <id>site.deployments</id>
+            <name>Site deployments</name>
+            <url>dav:http://127.0.0.1/sites/${project.artifactId}/</url>
+        </site>
+    </distributionManagement>
     <dependencies>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -74,6 +81,7 @@
                 <version>3.4</version>
                 <configuration>
                     <port>8081</port>
+                    <generateReports>false</generateReports>
                     <tempWebappDirectory>${basedir}/target/site/tempdir</tempWebappDirectory>
                 </configuration>
             </plugin>
@@ -88,15 +96,6 @@
             <!-- end - for deploying using webdav -->
         </extensions>
     </build>
-    <distributionManagement>
-        <!-- start - location where site is deployed - username/password for site.deployments in server.xml -->
-        <site>
-            <id>site.deployments</id>
-            <name>Site deployments</name>
-            <url>dav:http://127.0.0.1/sites/${project.artifactId}/</url>
-        </site>
-        <!-- end - location where site is deployed - username/password for site.deployments in server.xml -->
-    </distributionManagement>
     <reporting>
         <plugins>
             <plugin>
