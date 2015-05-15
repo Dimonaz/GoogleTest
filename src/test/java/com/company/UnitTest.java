@@ -36,7 +36,7 @@ public class UnitTest {
 
     }
 
-  /*  @Test
+    @Test
 
     public void Test2(){
 
@@ -44,7 +44,7 @@ public class UnitTest {
 
     }
 
-    @Test
+  /*  @Test
 
     public void Test3()throws Exception{
 
